@@ -1,0 +1,30 @@
+import { MDXProvider } from "@mdx-js/react";
+import { useAppContext as uac } from "components/AppProvider";
+import { colors } from "styles/theme";
+
+export default function Centering1({ children }) {
+  return (
+    <MDXProvider
+      components={uac().components(
+        colors.red,
+        colors.darkRed,
+        uac().useMobile()
+      )}
+    >
+      {children}
+    </MDXProvider>
+  );
+}
+
+[comment]: # "↓↓↓ Editable ↓↓↓"
+
+# Phase 1: Centering Human Rights
+
+Phase 1 will help you to start to figure out the problem the community you are working with is facing and whether or not you are able to help them solve it.
+It will also help answer the following questions:
+
+- What are the most ethical ways to research when building tools or services with the communities you serve?
+- How do you determine safety and security when working with a new community?
+- What are some real-world lessons learned from those we’ve worked with in the past?
+
+Lastly, it will teach you how to do threat modeling to determine the most prevalent threats your communities face.

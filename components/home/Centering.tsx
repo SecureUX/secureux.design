@@ -4,7 +4,7 @@ import { useAppContext } from "components/AppProvider";
 
 export const Centering: FC = () => {
   const {
-    colors: { black, orange, brightBlue },
+    colors: { black, white, red, darkRed },
   } = useAppContext();
 
   return (
@@ -15,11 +15,12 @@ export const Centering: FC = () => {
       viewBox="0 0 500 300"
     >
       <style>
-        {`.pill { fill: ${orange} }
-            .pill:hover { fill: ${brightBlue} }
-            .title { font: bold 30px sans-serif; color: ${black}; }`}
+        {`.centering { fill: ${red} }
+            .centering:hover { fill: ${darkRed}; }
+            .centering-title { font-weight: bold; font-size: 26px; font-family: Helvetica; fill: ${black}; }
+            .centering:hover ~ .centering-title { fill: ${white}; }`}
       </style>
-      <Link href="/centering/intro" passHref>
+      <Link href="/centering/" passHref>
         <rect
           x="15"
           y="15"
@@ -27,7 +28,8 @@ export const Centering: FC = () => {
           height="270"
           ry="235"
           rx="135"
-          className="pill"
+          className="centering"
+          cursor="pointer"
         />
       </Link>
       <marker
@@ -38,7 +40,7 @@ export const Centering: FC = () => {
         refY="3.5"
         orient="auto"
       >
-        <polygon points="0 0, 7 3.5, 0 7" />
+        <polygon points="0 0, 7 3.5, 0 7"     cursor="pointer"/>
       </marker>
       <path
         d="M150,285 A 1 1 0 0 1 150 15 L285,15"
@@ -54,8 +56,8 @@ export const Centering: FC = () => {
         strokeWidth="4"
         markerEnd="url(#arrowhead)"
       />
-      <text x="150" y="160" className="title">
-        1 CENTERING
+      <text x="58" y="160" className="centering-title">
+        1 CENTERING HUMAN RIGHTS
       </text>
     </svg>
   );

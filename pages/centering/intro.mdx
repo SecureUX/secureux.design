@@ -5,7 +5,11 @@ import { colors } from "styles/theme";
 export default function Intro({ children }) {
   return (
     <MDXProvider
-      components={uac().components(colors.mintGreen, uac().useMobile())}
+      components={uac().components(
+        colors.red,
+        colors.darkRed,
+        uac().useMobile()
+      )}
     >
       {children}
     </MDXProvider>
@@ -16,51 +20,139 @@ export default function Intro({ children }) {
 
 ###### 30-60min
 
-- Intermediate Level
-- Security Assessment Exercise
-- Pen/Paper, Post-its, Computer Text File
+##### All Levels
 
-1. Phase 1: Centering
+1. Phase 1: Centering Human Rights
 
-# Intro
+# Introduction
 
-## Working with communities and setting up secure communications
+The design and development of the tools that shape our everyday life are not neutral but rooted in cultural context and singular systems. This understanding shapes our approach and it led to the creation of this curriculum. Our curriculum acknowledges and builds on the work of other experts who aim to create a safer, more inclusive, human rights-focused digital world. Inspired by the [Secure UX Checklist](https://static1.squarespace.com/static/5e28cfb6752be803fc51f907/t/5eaa5b9f4f2f3e5a01d381ba/1588222879354/Secure+UX+Checklist.pdf), we designed this methodology, to help support designers, human rights activists, researchers, and policymakers. Regardless of your background, this curriculum can help guide you better understand and unpack the problems created by big technology and software platforms while helping you make better, usable, and safer software.
 
-How you conduct research, design, and build with and for communities is one
-of the most foundational parts of human rights centered design. In an HRCD process, you should already be working with a community. This chapter is going to focus on safe and secure ways for you to collaborate with that community (and the next chapter focuses on the different kinds of research you and your collaborators can do together!). HRCD isn’t just about the structure for doing work, it’s how you are doing that work, and how that work can accidentally or inadvertently harm collaborators, users, and community members you work with.
+This guide will help you learn how to center human rights throughout your entire research, ideation, building, iteration, and release processes. While this guide is created by and for human rights activists, it will be very useful for those outside the HR space who want to improve the safety and security of their communities and stakeholders when building resources and tools. [As Edward Snowden said](https://www.reddit.com/r/IAmA/comments/36ru89/just_days_left_to_kill_mass_surveillance_under/crglgh2/), "Arguing that you don't care about the right to privacy because you have nothing to hide is no different than saying you don't care about free speech because you have nothing to say.
 
-## Centering the community
+Our methodology blends human rights principles with participatory design strategies and an internet activists ethos. ‘Nothing about us without us’ is a guiding principle within the human rights centered design methodology embedded in our narrative. Our approach is grounded in people and focuses on how to bring rights, equity, and collaboration into every aspect of design. For a process to be inclusive, ethical, and human rights focused, it must be designed with the audience at the forefront and leave the ego of its creators at the door. Our process can, and should be, adjusted to fit your specific context and the audience you serve. While we understand that the case studies presented here can differ from your specific experiences, we recommend leveraging the practices they embed across your research, development, design and building processes.
 
-First and foremost, it is essential that you have the full support of the community you are working with to meet them where they are and get a well-rounded perspective of the problems you are trying to solve, which may not always be clear at first. Avoid missteps like helicoptering in without thoroughly learning about who you are working with, what they need help with, and how or whether your work will meet their needs. Too often, well-intentioned people with specific technical expertise have failed to effectively address a community’s problem, which may not need a technical solution, or who may be put at further risk by using that type of technology. It’s important to consider many factors before you even begin to work with the community. This is where your environmental scan from Chapter 1 will help you determine both what the community’s needs are, and what their capacity is to use your work to help address them.
+The following chapters layout 11 parts that take you from the start to end of a design process. Chapters 1, 2, and 3 lay the foundation for understanding the problem, developing personas, and designing for inclusivity. Chapters 4, 5, and 6 outline how to work with community partners and activists, evaluate your research, and develop feedback systems. Chapters 7, 8, and 9 walk through the building, on-going feedback, and iterating process. Lastly, chapters 10 and 11 focus on sustainability systems to create a more inclusive policy, design, building and research process.
 
-### Step 1: Know your community
+One more note. We have created this project as a reflection of our own experiences and prior learnings. Natalie is an archivist and ethnographer working at the nexus of human rights, technology, and information studies - most recently as the Executive Director at OpenArchive. She has a background and deep-seated, lifelong interest in privacy, security, and building tools for and with marginalized people and communities, and has worked with nonprofits, educators, and activists for 20 years. Caroline is a technologist and artist who looks at the intersection of technology's impact in society, specifically in interface design, artificial intelligence, abuse, and politics in digital and conversational spaces. Our combined experiences are not inclusive of all communities but when used appropriately, our practices and principles can be responsive and adaptive to your space(s). The framework we’ve developed, the experts we’ve invited to share experiences, and the spaces we hope to co-create with you act as a foundation for our curriculum to transpire across locations and groups.
 
-## Working with your community how to think about participatory design and localizing your project
+## Human Rights Centered Design Principles
 
-The following outlines what you need to consider before you begin working on a project with your community. Localizing your work within the community’s context is a foundational first step. What this means is that you are taking language, cultural norms, and regional laws and norms into consideration when working closely with these communities. Ideally, those working with these groups are actually part of them, however, this is not always possible, given the needs which can be at odds with the resources of the communities.
+- centers communities
+- is intersectional, accessible, and localized
+- places human rights directly into the design and technology process
+- privacy is a right, not a privilege
+- protection of users is key- security and safety are fundamental human rights
+- moves beyond participatory design and engages in cooperative and collaboratively design with communities
+- centers plurality of knowledge creation, and understands that the expert is an individual, community, coalition, an activist, a cooperative, a researcher, and an academic
+- expertise is created by everyone, and exists outside of the traditional, western ideas of who creates, and validates knowledge.
+- makes information legible and understandable- avoiding insider lingo, and complexities
 
-If you are not from the community you are working with, it’s important to
-work closely with community leaders who can translate their needs and work in tandem with you throughout the entire research, design, development,
-and implementation processes. It is important that there is no room for misunderstandings or information loss between cultures and languages when you are designing products and services for these groups, so ensure that
-any surveys or other communications you are creating for them are vetted, translated, adapted, and disseminated by
-a trusted community member.
+### Background
 
-## Meeting your community where they are
+## History of Human Centered Design
 
-It’s crucial to use tools that are familiar to the community you are working with. One great example of how this works in the field is unpacked by Neema Iyer,design and research expert, and founder of the NGO, Pollicy. Neema explains, “So, one time we were trying to do focus group discussions with refugees in Kenya. And we were like, can we use zoom and then we realized no zoom is totally out of the picture. Because first of all, zoom is very data heavy. Also, if you’ve never used zoom, you don’t know how to use it right, because you’ve just never had a reason to use it. So we actually ended up running the focus groups over WhatsApp, because everybody knows how to use WhatsApp. And you can set up a whatsapp group with eight people. And that actually worked out really well. Meeting people where they are on the platforms that they’re at and then having these conversations with people from the community, or people who work with them in the community, to get to serve as their spokespeople and to give you feedback on whatever you’re building.”
+Design touches almost everything in our daily lives, from the chairs we sit on, to the governing principles that dictate bureaucracy, and to the apps we use every day. Digital products and software design have continued to rise in currency--often dictating how we connect with each other or complete simple tasks like paying our bills. However, just like people, there are implicit policies baked into their design that result in bias.
 
-### Step II: Setting up a workflow with your community
+Most current digital design processes are based on a set of standards and protocols that pull from a methodology popularized in the 1990s called ‘human centered design’. ‘Human centered design’, as a concept, was coined by author Mike Cooley in his 1982 book Architect or Bee. Human centered design was popularized by the global design firm, IDEO, and is one of the reasons why a product made in India can be used by people in Singapore, Australia, or France.
 
-One of our co-writers, Caroline, used to work with the Wikimedia Foundation, an open source1, educational nonprofit that powers Wikipedia. As a side note, it’s important to highlight that just because something is open source, that doesn’t make it necessarily human rights focused, or even equitable. Some open source projects can have really toxic communities that harm each other (Wikipedia included). That being said, there is a kind of accountability in an open source process. By sharing processes about how technology is made and allowing for community input, those developing open source code allows for a kind of public audit. For example, the Signal messaging app’s encryption system can be verified as secure because most of the code is made public, i.e. is “open source software” whereas Telegram’s cannot. Signal shares their protocol and open sources it- allowing others to test it, see how it was written and audit it; Telegram has not shared the code behind their encryption so it cannot be confirmed.
+While the idea that designers can work with individuals to create tools for those around the world is exciting, it’s important to note that designers and companies have values and biases that are not universal and get superimposed into design processes that are presented as universal. For example, IDEO was founded in the heart of Silicon Valley and its principles and culture reflect that specific location’s culture, which often do not map to other locales.
+
+The notion that design is universal, or that it should be, is a widespread misconception. In order to meet varying needs, design cannot be a one-size-fits-all solution, it must adapt to the specific needs you are addressing. The desire to simplify the design process and develop uniform standards is problematic and inflicts harm. We need design that is grounded in plurality and a variety of experiences to truly make ethical and equitable products and services. When design reflects the multiplicity of people using technology today, it can then work to benefit the community it serves, instead of inflicting harm. To address the disparities between what design is and what it needs to be, we propose a transition from the commonly used ‘human centered design’ to ‘human rights centered design.’
+
+Design methods and design thinking drive how products are made. [Professor Ahmed Ansari points out](https://aansari86.medium.com/politics-method-cd4cc2c8f5e6) that “no toolkit, book, lecture or workshop opens without a clarification or homage to these two terms; one cannot (presumably) practice social design without clearing them.” Ansari has been lecturing across the United States and Pakistan over the past few years, and reflects on how the growing culture of startups, namely software startups, have grown in Pakistan. Ansari writes, “having contributed to these developments over the last two years, travelling around the country conducting workshops, delivering lectures, and teaching design in various local schools, I have become uncomfortable with the idea of design thinking and the way in which it has arrived in Pakistan, divorced from its larger history and the kinds of debates happening around it in the Global North.” Ansari recounts how specific design, art, and craft have been used to localize external contexts and protocols in Pakistan but explains how “these traditional ways of practicing design have now been disrupted with the arrival and popularization of design methods as the handmaiden of particular models of development championed by an ascendant technocracy.” Ansari advocates for the importance of anthropology living alongside design to decolonize the existing design practices.
+
+Other researchers and professors, like Sasha Constanza-Chock advocate for [design justice](https://designjustice.org/) which emphasizes bringing communities into the design process by centering the most marginalized. Open government initiatives across the U.S. and the EU advocate for design practitioners working directly with bureaucracy and civil servants to design for citizen-centered processes like benefits, healthcare, and infrastructure. There are increasingly more examples of how we can distribute design while centering the voices of the communities who will use the products or services. These practices share many similarities, in the sense that they focus on relevant communities and advocates, which enables the end product to be highly effective in achieving its goals and security for the people who use it.
+
+While our intentions are changing, there is evidence of on-going trade offs that occur between design and safety. Human rights activists have traditionally had to adapt their practices to the tools available or most comfortable for their audience. One example of this is the popular work and conversation tool, Slack. While its utility is highly perceived by many groups and organizations, it has been criticized for its lack of design safety features such as in-app blocking. While some activists have turned to more secure platforms like Jitter or Matrix, these alternatives have accessibility or usability barriers that are often seen in open source or free tools.
+
+## Human Rights Centered Design (HRCD)
+
+Thus far, design and building processes have not centered and prioritized human rights. To address this, we are re-imagining how these processes work and change when focusing on human rights. While no methodology is perfect, by centering at-risk communities throughout our design and building processes, our work helps to bridge the largest gaps between equity, security, and safety - often for the communities that need it most. Historically, designing for the most vulnerable leads to better design and safer practices for everyone.
+
+We first look at two questions: What is human rights policy? And why do we need it?
+
+## What is Human Rights Policy?
+
+Human rights law as defined by the United Nations 1948 Universal Declaration of Human Rights (UDHR), outlines the basic inalienable rights afforded to all people, including the right to freedom of speech and expression, security, and liberty. The UN has [30 articles](https://www.standup4humanrights.org/en/declaration.html) that include principles which outline human rights freedoms and are designed to govern and guide the creation of conventions, treaties and other legal instruments. The UDHR, alongside the International Covenant for Civil and Political Rights (ICCPR), and the International Covenant for Economic, Social and Cultural Rights (ICESC), make up the [International Bill of Rights](https://www.ohchr.org/Documents/Publications/FactSheet2Rev.1en.pdf). The UDHR principles’ focus on ‘universal and inalienable’ rights mean that anyone, regardless of who or where they are, is entitled to protected freedoms. The UN’s Office of the High Commissioner defines these rights as being indivisible and interdependent. Meaning “that one set of rights cannot be enjoyed fully without the other.” For example, making progress in civil and political rights makes it easier to exercise economic, social, and cultural rights. Similarly, violating economic, social, and cultural rights can negatively affect civil or political rights.
+
+It’s important to understand how human rights law, and its subsequent policy, manifests in our day-to-day lives. To exemplify this, two key policies that were born out of these laws specifically aimed at protecting privacy are the EU’s GDPR (General Data Protection Regulation) in 2018 and in the US the CCPA (California’s Consumer Privacy Act) in 2020. “The GDPR is the toughest privacy and security law in the world. Though it was drafted and passed by the European Union (EU), it imposes obligations on organizations anywhere, so long as they target or collect data related to people in the EU.” Whereas CCPA “gives consumers more control over the personal information that businesses collect about them and the CCPA regulations provide guidance on how to implement the law.”
+
+#### Universal Declaration of Human Rights
+
+> UDHR is a declaration that spells out basic rights that all human rights should enjoy. It is not an international treaty; it is a statement/declaration that lays out potential for rights. Thus, it is often called soft law which means it is not legally enforceable in court.
+>
+> The right to be free and equal, the freedom from discrimination, the right to life, freedom from slavery, freedom from torture, right to recognition before the law, right to equality before the law, access to justice, freedom from arbitrary detention, right to a fair trial, presumption of innocence, right to privacy, freedom of movement, right to asylum, right to nationality, right to marriage and to found a family, right to own property, right to a religion or belief, freedom of expression, freedom of assembly, right to partake in public affairs, right to social security, right to work, right to leisure and rest, right to adequate standard of living, right to education, right to cultural, artistic, and scientific life, right to a free and fair world, duty to your community and that these rights are inalienable.
+>
+> https://www.ohchr.org/EN/UDHR/Documents/UDHR_Translations/eng.pdf
+
+## Human Rights and Technology Platforms
+
+While this sounds like something all companies and countries are expected to prioritize, it has proven difficult for many to uphold the rights of a diverse and global audience. For example, we have seen how technology companies have used Freedom of Expression to allow mis-represented posts on their site that have caused real harm to ethnic or racial communities globally. In the last decade, we have seen an increase in how technology platforms have repeatedly impacted human rights for the worst. Though there are governing bodies to protect our human rights, these bodies pre-date technology which is often left unregulated and open to human rights violations.
+
+Here are just some examples of human rights violations that happen inside of technology:
+
+- Misinformation
+- Disinformation
+- Social media assisted genocide
+- Gender-based violence
+- Lack of privacy protections
+- Surveillance
+- Facial recognition
+- Predictive policing
+- Digital redlining
+- Online censorship of journalists and activists
+- Internet shutdowns
+- Data misuse against communities
+- And so much more!
+
+## Human Rights and Technology Platforms Putting Harm Into Context
+
+One of the UDHR principles, Freedom of Religion, was implemented at a time in history where religion was used to limit access to information or used a policy mechanism towards control of people which has led to harm. Continuing to uphold these principles can result in harm for some communities. For example, regardless of your perspective on abortion, religious beliefs can dictate laws to limit access to abortion or birth control. Another example is the Right to Privacy. A lot of technology companies would be guilty of violating the UDHR principles with the amount of data leaks and misuse at their companies. However, sometimes, it’s the production of the technology or product that’s very essence is an infringement on privacy. For example, the organization called [Clearview AI created a non-consensual database](https://www.buzzfeednews.com/article/ryanmac/clearview-ai-local-police-facial-recognition) of people and their information using facial recognition technology that is used by corporations and police forces alike. Whereas, other times it can be an existing product or technology that is manipulated to infringe on privacy and human rights. Such as the use of Facebook to spread misinformation, disinformation, and violent extremism that led to the genocide of Rohingya Muslims in Myanmar.
+
+#### Privacy as a Right
+
+> Privacy (as defined by Privacy International) is a fundamental right, essential to autonomy and the protection of human dignity, serving as the foundation upon which many other human rights are built.
+>
+> Privacy enables us to create barriers and manage boundaries to protect ourselves from unwarranted interference in our lives, which allows us to negotiate who we are and how we want to interact with the world around us. Privacy helps us establish boundaries to limit who has access to our bodies, places, and things, as well as our communications and our information.
+>
+> The rules that protect privacy give us the ability to assert our rights in the face of significant power imbalances.
+>
+> As a result, privacy is an essential way we seek to protect ourselves and society against arbitrary and unjustified use of power, by reducing what can be known about us and done to us, while protecting us from others who may wish to exert control.
+>
+> https://privacyinternational.org/explainer/56/what-privacy
+
+## Human Rights and Design
+
+Human rights policy also affects design. Design travels well beyond layouts or UX/UI or graphic design. Design is a process by which an app or product is made, from ideation, research, prototyping and building. It’s a design choice to incorporate people in a project, app, or software, and how that software is built. A product can use an algorithm which is considered part of the design, because there was a choice to use it to do ‘something’ in the product. The design process directly resulted in the thinking that led to including that technology or the development of a feature that utilizes that technology.
+
+[The 6 Principles of Human Rights Centered Design for AI](https://xd.adobe.com/ideas/perspectives/social-impact/human-rights-centered-design/) - Caroline wrote this for Adobe in the context of AI, but it is applicable to all kinds of software and technology.
+
+- Human Rights Centered Design is about privacy and data protection first, recognizing that data is human, inherently, and always.
+- It puts the user’s agency first by always focusing on consent. Always offer a way for a user to say yes or no, without being tricked or nudged.
+- It doesn’t design with only opt-out in mind; it puts choice at the forefront of design.
+- It designs for the Global South first, and centers diversity of experiences.
+- It actively asks, “What could go wrong in this product?”—from the benign to the extreme—and then plans for those use cases.
+- It views cases of misuse as serious problems and not as edge cases, because a bug is a feature until it’s fixed.
+
+## Putting HRCD into practice
+
+“What’s the worst that could go wrong?” HRCD means asking this critical question throughout the design process. If we said, let’s build a tool that allows us to surface happenstance content from across different communities that interests our users - HRCD would ask, what happens if that content is propaganda? What happens if it hurts someone? What do we do with this content and how do we fix it? It’s acknowledging something could go wrong across many stages of the design process and requires us to imagine solutions before problems have occurred.
+
+HRCD demands that we focus on harm reduction from the very beginning because of the design process since any product can create harm and can be misused. It forces us to think about how: one tool or feature can be used to harass someone or even, how a tool in the wrong hands can lead to government surveillance or censorship of the media. While these examples occur regularly around the world, we must contextualize this for designers to understand how smaller, obtrusive harms could eventually lead to large-scale impact. For this we look at popular apps like Grindr, OkCupid, or Clubhouse that have faced scrutiny over lack of moderation or exposure of personal details. For the all-male dating app Grindr, letting people mark their exact location makes it easier for users to find people nearby but that same data in the wrong hands can put a particularly vulnerable group at risk.
+
+## Privacy, Data Protection, Legibility and Consent
+
+HRCD insists on prioritizing privacy, data protection, legibility, and consent. In HRCD, the same sovereignty and protection for the user of a product is applied to the data. This means respecting a user’s privacy and data, thinking about the digital rights of global people, and designing for a diverse range of individuals. It also means consent. Is the user aware of what information they are sharing, and have they given permission? Do they have an option to say no or revoke consent? For some designers, consent requires you to step back and question whether you even need all the data you are collecting. Consent is closely connected to legibility. Legibility means using plain or easy to understand language, so a user understands what is happening in the product, and why. Privacy, data protection, legibility, and consent all go hand in hand to create equitable technology.
+
+## A Tip: Leave YOUR EGO and YOUR THOUGHTS at the door.
+
+As a researcher, campaigner or as our own individual selves, we all have our own thoughts, and our own ego in our processes. But the biggest tip we must conduct true human rights centered participatory research is to leave your own ego at the door. This isn’t about you, or your wants, or your desires. It’s about the community you’re working with. Sometimes the shiniest or fanciest solution isn't the necessary one. A phrase we often use is ‘remember the power of the PDF’- meaning sometimes the most necessary ‘tool’ or solution a group needs is just...a piece of paper. A PDF with processes or a phone tree. Sometimes, it’s just someone to help answer emails, or do administrative work. The solution is just an extra set of hands where someone is very invested, and consistently shows up.
+
+## Tech Alone Can’t Fix Human Rights
+
+This will be a refrain you see again and again throughout the HRCD curriculum, technology alone isn’t a solution, which is why how we work together, and how we work with communities is so important. Technology is a tool that we use, but we have to place that tool into context. In the middle of 2021, Caroline was visiting friends in Amsterdam; they were talking about the role of decentralization and what can be solved or created with new projects. One friend mentioned Mastodon, and how the design of Mastodon allows for communities to create their own kinds of nuanced tools to combat harm and enact their own versions of content moderation. This kind of agency is aided by decentralization but created solely by that. However, this same friend brought up Scuttlebutt, and how that seems to be a ‘cool technology’ but in search of a problem to solve. Our point here isn’t to just focus on and critique decentralization but to highlight how a kind of technology can help aid or alleviate problems, but sometimes technology is just a shiny thing, with no solution tied to it. We see this also in blockchain, as human rights researcher and Localization Lab founder Dragana Kaurin has extensively researched. Kaurin said in an interview for [The Open Mind podcast](https://www.thirteen.org/openmind/science/technology-to-combat-authoritarianism/6135/), “Promoting technologies like blockchain as a seemingly simple solution to complex humanitarian and development challenges oversimplifies these issues and celebrates tech as a "silver bullet" solution that will solve everything from poverty to the refugee crisis. This has led to many projects seeking technical solutions first without analyzing the challenges and opportunities, understanding the limits, potential, and threats that come with the technology in question, or including beneficiaries in decision-making. **When we make decisions in humanitarian and development projects based on solutions we want to use, instead of user needs, we could be exposing beneficiaries to bigger risks, by leaving them out of the decision-making process.”**
+
+As human rights designers, we must avoid creating technology just for technology’s sake. By working with communities, we can build sustainable, and useful technology. And we must situate how that technology will be placed in the world. We must map out and work through- how can that technology impact or create further problems.
 
 ![alt text](/images/uxs-icon-1.svg)
-
-One of our co-writers, Caroline, used to work with the Wikimedia Foundation, an open source1, educational nonprofit that powers Wikipedia. As a side note, it’s important to highlight that just because something is open source, that doesn’t make it necessarily human rights focused, or even equitable. Some open source projects can have really toxic communities that harm each other (Wikipedia included). That being said, there is a kind of accountability in an open source process. By sharing processes about how technology is made and allowing for community input, those developing open source code allows for a kind of public audit. For example, the Signal messaging app’s encryption system can be verified as secure because most of the code is made public, i.e. is “open source software” whereas Telegram’s cannot. Signal shares their protocol and open sources it- allowing others to test it, see how it was written and audit it; Telegram has not shared the code behind their encryption so it cannot be confirmed.
-
-#### Exercise 1: Assess how secure your communications are
-
-```
-Before you start building the tool, platform, or technology, you want to know the people who will be using them. Consider collecting and analyzing information background to render a clear hierarchy visible from your stakeholders and research participants.
-
-Another paragaraph goes here.
-```

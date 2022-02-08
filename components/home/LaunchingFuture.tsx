@@ -4,7 +4,7 @@ import { useAppContext } from "components/AppProvider";
 
 export const LaunchingFuture: FC = () => {
   const {
-    colors: { lavender, lightBlue, brightBlue },
+    colors: { white, black, lavender, darkLavender, lightBlue, darkLightBlue },
   } = useAppContext();
 
   return (
@@ -15,14 +15,16 @@ export const LaunchingFuture: FC = () => {
       viewBox="0 0 985 560"
     >
       <style>
-        {`.pill5 { fill: ${lavender} }
-              .pill5:hover { fill: ${brightBlue} }
-              .pill5:hover ~ .testPath { transition: 0.5s; d: path("M 250 15 L 450,15 A 130 130, 0, 0, 1, 585 150 A 130 130, 0, 0, 0, 715 280");}
-              .pill4 { fill: ${lightBlue} }
-              .pill4:hover { fill: ${brightBlue} }
-              .title { font: 400 25px Helvetica; color: black; }`}
+        {`.launching { fill: ${lavender} }
+          .launching:hover { fill: ${darkLavender} }
+          .launching-title { font-weight: bold; font-size: 26px; font-family: Helvetica; fill: ${black}; }
+          .launching:hover ~ .launching-title { fill: ${white}; }
+          .future { fill: ${lightBlue} }
+          .future:hover { fill: ${darkLightBlue}; }
+          .future-title { font-weight: bold; font-size: 26px; font-family: Helvetica; fill: ${black}; }
+          .future:hover ~ .future-title { fill: ${white}; }`}
       </style>
-      <Link href="/future/12" passHref>
+      <Link href="/future/" passHref>
         <rect
           x="15"
           y="15"
@@ -30,7 +32,7 @@ export const LaunchingFuture: FC = () => {
           height="270"
           ry="235"
           rx="135"
-          className="pill4"
+          className="future"
           cursor="pointer"
         />
       </Link>
@@ -45,10 +47,10 @@ export const LaunchingFuture: FC = () => {
         <polygon points="0 0, 10 5, 0 10" />
       </marker>
 
-      <text x="80" y="160" className="title">
+      <text x="74" y="160" className="future-title">
         5 LOOKING TO THE FUTURE
       </text>
-      <Link href="/launching/10" passHref>
+      <Link href="/launching/" passHref>
         <rect
           x="500"
           y="280"
@@ -56,20 +58,19 @@ export const LaunchingFuture: FC = () => {
           height="270"
           ry="235"
           rx="135"
-          className="pill5"
+          className="launching"
           cursor="pointer"
         />
       </Link>
       <text
         x="730"
         y="420"
-        className="title"
+        className="launching-title"
         textAnchor="middle"
         dominantBaseline="central"
       >
         4 LAUNCHING
       </text>
-
       <path
         d="M 725 280
              L 610,280

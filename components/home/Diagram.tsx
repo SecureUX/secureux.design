@@ -31,7 +31,7 @@ export const Diagram = () => (
     id="top"
     sx={{
       position: "relative",
-      minHeight: "650px",
+      minHeight: "700px",
       width: "90%",
       aspectRatio: "3 / 2",
       m: "0 auto",
@@ -57,7 +57,7 @@ export const Diagram = () => (
       sx={{
         width: "8%",
         position: "absolute",
-        top: "75%",
+        top: "85%",
         left: "90%",
         animationDelay: "0.25s",
         animation: `${pulse} 2s infinite ease-in-out`,

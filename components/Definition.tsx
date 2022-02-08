@@ -8,13 +8,12 @@ export const Definition = ({ id, children }) => {
   useEffect(() => {
     const updateVisibility = () => {
       setVisible(window && window?.location?.hash === `#${id}`);
-      console.log({ visible });
     };
     Router.events.on("hashChangeStart", updateVisibility);
     return () => {
       Router.events.off("hashChangeComplete", updateVisibility);
     };
-  }, [id]);
+  }, [id, visible]);
 
   return visible ? (
     <Grid item xs={2} sx={{ mt: "40px", mb: "10px" }}>

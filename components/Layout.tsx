@@ -1,5 +1,6 @@
 import { FC, useState } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 import { Box, Grid } from "@mui/material";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import { Menu } from "./Menu";
@@ -7,9 +8,10 @@ import { useAppContext } from "./AppProvider";
 
 export const Layout: FC = ({ children }) => {
   const router = useRouter();
-  const currentChapter = router.asPath.split("/")[1];
+  const currentPhase = router.asPath.split("/")[1];
+  const chapter = router.asPath.split("/")[2];
   const {
-    colors: { orange, mintGreen, limeGreen, lavender, lightBlue },
+    colors: { red, mintGreen, mustardYellow, lavender, lightBlue },
   } = useAppContext();
   const [scrollPosition, setScrollPosition] = useState(0);
   useScrollPosition(
@@ -20,18 +22,30 @@ export const Layout: FC = ({ children }) => {
     null,
     true
   );
-  const chapters = {
-    research: orange,
-    ideation: mintGreen,
-    prototyping: limeGreen,
-    launching: lavender,
-    future: lightBlue,
+  const phases = {
+    centering: { color: red, number: 1 },
+    research: { color: mintGreen, number: 2 },
+    prototyping: { color: mustardYellow, number: 3 },
+    launching: { color: lavender, number: 4 },
+    future: { color: lightBlue, number: 5 },
   };
+
+  const title = chapter
+    ? `${currentPhase} – chapter ${chapter}`
+    : currentPhase || "human rights centered design - home".toUpperCase();
 
   return (
     <>
-      <Menu />
-      {Object.keys(chapters).includes(currentChapter) ? (
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="Based on extensive research, we are offering: best practices, use cases, and knowledge from human rights activists, community organizers, and technologists from across the globe."
+        />
+        <title>{title.toUpperCase()}</title>
+      </Head>
+      <Menu currentPhase={phases[currentPhase]?.number} />
+      {Object.keys(phases).includes(currentPhase) ? (
         <Box
           sx={{
             position: "fixed",
@@ -42,7 +56,7 @@ export const Layout: FC = ({ children }) => {
             marginLeft: "56px",
             opacity: 0.95,
             background: `linear-gradient(to right, #fff 0%, ${
-              chapters[currentChapter]
+              phases[currentPhase]?.color
             } ${scrollPosition}%, #fff ${scrollPosition + 0.0001}%)`,
           }}
         />

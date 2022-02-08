@@ -1,27 +1,39 @@
 import { useState, useEffect } from "react";
 import Router from "next/router";
-import Link from "next/link";
-import { Grid, Drawer, Box, IconButton, Button } from "@mui/material";
-import { InfoOutlined, Twitter, Instagram } from "@mui/icons-material";
+import NextLink from "next/link";
+import { Grid, Drawer, Box, IconButton } from "@mui/material";
+import {
+  Menu as MenuIcon,
+  Twitter as TwitterIcon,
+  Instagram as InstagramIcon,
+} from "@mui/icons-material";
 import LogoWhite from "public/images/logo-white-vertical.svg";
 import LogoSmallWhite from "public/images/uxs-icon-1-white.svg";
 import { PhaseAccordion } from "components/PhaseAccordion";
 import { useAppContext } from "components/AppProvider";
 
-export const Menu = () => {
+const Link = ({ href, children, ...props }) => (
+  <NextLink href={href} passHref {...props}>
+    <Box component="a" onClick={(e: any) => e.stopPropagation()}>
+      {children}
+    </Box>
+  </NextLink>
+);
+
+export const Menu = ({ currentPhase }) => {
   const {
-    typography: { h1 },
+    typography: { h1, h5 },
     colors: { white, brightBlue },
     useMobile,
   } = useAppContext();
   const isMobile = useMobile();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [expandedChapter, setExpandedChapter] = useState(1);
-  const toggleExpandedChapter = (chapter: number) => {
-    if (chapter === expandedChapter) {
-      setExpandedChapter(0);
+  const [expandedPhase, setExpandedPhase] = useState(currentPhase);
+  const toggleExpandedPhase = (phase: number) => {
+    if (phase === expandedPhase) {
+      setExpandedPhase(0);
     } else {
-      setExpandedChapter(chapter);
+      setExpandedPhase(phase);
     }
   };
   const mainMenuItemStyles = {
@@ -45,6 +57,10 @@ export const Menu = () => {
       color: white,
     },
   };
+
+  useEffect(() => {
+    setExpandedPhase(currentPhase);
+  }, [currentPhase]);
 
   useEffect(() => {
     const closeMenu = () => {
@@ -108,15 +124,15 @@ export const Menu = () => {
         </Grid>
 
         <Grid item>
-          <Box sx={mainMenuItemStyles}>
-            <Link href="/centering/1">Phases</Link>
-          </Box>
           <PhaseAccordion
-            title="Centering"
+            title="Centering Human Rights"
             phase={1}
-            expandedPhase={expandedChapter}
-            toggleExpandedPhase={toggleExpandedChapter}
+            expandedPhase={expandedPhase}
+            toggleExpandedPhase={toggleExpandedPhase}
           >
+            <Box sx={chapterStyles}>
+              <Link href="/centering/">Overview</Link>
+            </Box>
             <Box sx={chapterStyles}>
               <Link href="/centering/how-to-use">How to Use</Link>
             </Box>
@@ -124,7 +140,7 @@ export const Menu = () => {
               <Link href="/centering/intro">Intro</Link>
             </Box>
             <Box sx={chapterStyles}>
-              <Link href="/centering/1">
+              <Link href="/centering/1" onClick={undefined}>
                 Chapter 1 – Figuring Out the Problem
               </Link>
             </Box>
@@ -145,9 +161,12 @@ export const Menu = () => {
           <PhaseAccordion
             title="Research"
             phase={2}
-            expandedPhase={expandedChapter}
-            toggleExpandedPhase={toggleExpandedChapter}
+            expandedPhase={expandedPhase}
+            toggleExpandedPhase={toggleExpandedPhase}
           >
+            <Box sx={chapterStyles}>
+              <Link href="/research/">Overview</Link>
+            </Box>
             <Box sx={chapterStyles}>
               <Link href="/research/4">Chapter 4 – Research</Link>
             </Box>
@@ -169,9 +188,12 @@ export const Menu = () => {
           <PhaseAccordion
             title="Prototyping"
             phase={3}
-            expandedPhase={expandedChapter}
-            toggleExpandedPhase={toggleExpandedChapter}
+            expandedPhase={expandedPhase}
+            toggleExpandedPhase={toggleExpandedPhase}
           >
+            <Box sx={chapterStyles}>
+              <Link href="/prototyping/">Overview</Link>
+            </Box>
             <Box sx={chapterStyles}>
               <Link href="/prototyping/8">
                 Chapter 8 – Community Feedback and Testing
@@ -189,9 +211,12 @@ export const Menu = () => {
           <PhaseAccordion
             title="Launching"
             phase={4}
-            expandedPhase={expandedChapter}
-            toggleExpandedPhase={toggleExpandedChapter}
+            expandedPhase={expandedPhase}
+            toggleExpandedPhase={toggleExpandedPhase}
           >
+            <Box sx={chapterStyles}>
+              <Link href="/launching/">Overview</Link>
+            </Box>
             <Box sx={chapterStyles}>
               <Link href="/launching/10">
                 Chapter 10 – Building a Secure, Ethical Prototype
@@ -207,9 +232,12 @@ export const Menu = () => {
           <PhaseAccordion
             title="Looking to Future"
             phase={5}
-            expandedPhase={expandedChapter}
-            toggleExpandedPhase={toggleExpandedChapter}
+            expandedPhase={expandedPhase}
+            toggleExpandedPhase={toggleExpandedPhase}
           >
+            <Box sx={chapterStyles}>
+              <Link href="/launching/">Overview</Link>
+            </Box>
             <Box sx={chapterStyles}>
               <Link href="/future/12" passHref>
                 Chapter 12 – Sustainability
@@ -245,7 +273,7 @@ export const Menu = () => {
           <Grid item sx={{ "& :hover": { color: brightBlue } }}>
             <Link href="https://twitter.com" passHref>
               <IconButton sx={{ color: "white" }}>
-                <Twitter />
+                <TwitterIcon />
                 <Box sx={{ ml: "8px" }}>Twitter</Box>
               </IconButton>
             </Link>
@@ -253,7 +281,7 @@ export const Menu = () => {
           <Grid item sx={{ "& :hover": { color: brightBlue } }}>
             <Link href="https://instagram.com" passHref>
               <IconButton sx={{ color: "white" }}>
-                <Instagram />
+                <InstagramIcon />
                 <Box sx={{ ml: "8px" }}>Instagram</Box>
               </IconButton>
             </Link>
@@ -288,18 +316,13 @@ export const Menu = () => {
           }}
         >
           <Grid item>
-            <Button
-              sx={{
-                color: "white",
-                textTransform: "uppercase",
-                fontSize: 12,
-                textAlign: "center",
-                mt: "6px",
-              }}
+            <IconButton
               onClick={() => setMenuOpen(!menuOpen)}
+              sx={{ color: "white", mb: "6px" }}
+              aria-label="Menu"
             >
-              {menuOpen ? "Close" : "Open"}
-            </Button>
+              <MenuIcon />
+            </IconButton>
           </Grid>
           {isMobile ? (
             <Grid item onClick={() => setMenuOpen(!menuOpen)}>
@@ -333,10 +356,8 @@ export const Menu = () => {
             alignItems="flex-end"
             xs={1}
           >
-            <Link href="/#info" passHref>
-              <IconButton sx={{ color: "white", mb: "6px" }}>
-                <InfoOutlined />
-              </IconButton>
+            <Link href="/" passHref>
+              <Box sx={{ ...h5, color: "white", ml: -1, mb: 1 }}>Home</Box>
             </Link>
           </Grid>
         </Grid>

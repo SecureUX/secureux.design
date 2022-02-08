@@ -6,11 +6,16 @@ const breakSmall = "@media (max-width: 400px)";
 export const colors: any = {
   white: "#ffffff",
   black: "#000000",
-  orange: "#f94b26",
+  red: "#f94b26",
+  darkRed: "#3c0c02",
   mintGreen: "#a9d8b8",
-  limeGreen: "#d3fc7a",
+  darkMintGreen: "#224428",
+  mustardYellow: "#ffdb57",
+  darkMustardYellow: "#e0b000",
   lavender: "#e2c5e4",
+  darkLavender: "#432046",
   lightBlue: "#42acf7",
+  darkLightBlue: "#02243c",
   brightBlue: "#0000ff",
 };
 
@@ -23,9 +28,10 @@ export const typography: any = {
     textTransform: "uppercase",
     fontWeight: 400,
     margin: 0,
+
     [breakSmall]: {
-      fontSize: "55px",
-      lineHeight: "60px",
+      fontSize: "40px",
+      lineHeight: "50px",
     },
   },
   // section title
@@ -37,8 +43,8 @@ export const typography: any = {
     fontWeight: 400,
     margin: 0,
     [breakSmall]: {
-      fontSize: "32px",
-      lineHeight: "40px",
+      fontSize: "30px",
+      lineHeight: "38px",
     },
   },
   // section title with background
@@ -50,8 +56,8 @@ export const typography: any = {
     fontWeight: 400,
     margin: 0,
     [breakSmall]: {
-      fontSize: "32px",
-      lineHeight: "40px",
+      fontSize: "30px",
+      lineHeight: "38px",
     },
   },
   // exercise title
@@ -62,6 +68,7 @@ export const typography: any = {
     textTransform: "uppercase",
     fontWeight: 400,
     margin: 0,
+    wordBreak: "break-all",
   },
   // tags
   h5: {
@@ -112,7 +119,7 @@ export const typography: any = {
 };
 
 const extractID = (rawText: string) => {
-  const matches = rawText.match(/(?<=\{#)(.*)(?=\}$)/);
+  const matches = []; // rawText.match(/(?<=\{#)(.*)(?=\}$)/);
   const id = matches && matches.length > 0 ? matches[0] : null;
   const text = rawText.replace(/ \{#.*\}$/, "");
 
@@ -121,6 +128,7 @@ const extractID = (rawText: string) => {
 
 export const components = (
   color: string = colors.black,
+  darkColor: string = colors.black,
   isMobile: boolean = false
 ) => ({
   // chapter title
@@ -128,13 +136,13 @@ export const components = (
     const rawText = children as string;
     const [id, text] = extractID(rawText);
     return (
-      <Grid item xs={isMobile ? 8 : 6}>
+      <Grid item xs={8} sm={6}>
         <Box
           id={id}
           component="h1"
           sx={{
             ...typography.h1,
-            color,
+            color: darkColor,
           }}
         >
           {text}
@@ -144,7 +152,7 @@ export const components = (
   },
   // section title
   h2: ({ children }) => (
-    <Grid item xs={isMobile ? 8 : 7}>
+    <Grid item xs={8} sm={7}>
       <Box
         component="h2"
         sx={{
@@ -158,7 +166,7 @@ export const components = (
   ),
   // section title with background
   h3: ({ children }) => (
-    <Grid item xs={isMobile ? 8 : 7}>
+    <Grid item xs={8} sm={7}>
       <Box
         component="h3"
         sx={{
@@ -183,7 +191,7 @@ export const components = (
   ),
   // exercise title
   h4: ({ children }) => (
-    <Grid item xs={isMobile ? 8 : 7}>
+    <Grid item xs={8} sm={7}>
       <Box
         component="h4"
         sx={{
@@ -219,7 +227,7 @@ export const components = (
     </Box>
   ),
   p: ({ children }) => (
-    <Grid item xs={isMobile ? 8 : 6}>
+    <Grid item xs={8} sm={6}>
       <Box
         component="p"
         sx={{
@@ -232,83 +240,8 @@ export const components = (
       </Box>
     </Grid>
   ),
-  blockquote: ({ children }) => {
-    const rawText = children.props.children as string;
-    const [id, text] = extractID(rawText);
-
-    return <Definition id={id}>{text}</Definition>;
-  },
-  // top tags
-  ul: ({ children }) => (
-    <Grid item xs={8}>
-      <Box
-        component="ul"
-        sx={{
-          ...typography.h5,
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "flex-start",
-          p: 0,
-          m: 0,
-          mt: "25px",
-          mb: "40px",
-          "& li": {
-            border: "1px solid black",
-            borderRadius: "50px",
-            display: "flex",
-            marginBottom: "14px",
-            marginRight: "14px",
-            paddingLeft: "10px",
-            paddingRight: "10px",
-            paddingTop: "4px",
-            paddingBottom: "4px",
-            whiteSpace: "nowrap",
-          },
-          listStyleType: "none",
-        }}
-      >
-        {children}
-      </Box>
-    </Grid>
-  ),
-  // phase / chapter tags
-  ol: ({ children }) => (
-    <Grid item xs={isMobile ? 8 : 2}>
-      <Box
-        component="ol"
-        sx={{
-          ...typography.h5,
-          display: "flex",
-          alignItems: "flex-start",
-          flexDirection: "column",
-          p: 0,
-          mt: "12px",
-          listStyleType: "none",
-          "& li": {
-            display: "flex",
-            alignSelf: "flex-start",
-            backgroundColor: color,
-            borderRadius: "50px",
-            marginBottom: "14px",
-            marginRight: "14px",
-            paddingLeft: "10px",
-            paddingRight: "10px",
-            paddingTop: "4px",
-            paddingBottom: "4px",
-            whiteSpace: "nowrap",
-          },
-        }}
-      >
-        {children}
-      </Box>
-    </Grid>
-  ),
-  pre: ({
-    children: {
-      props: { children },
-    },
-  }) => (
-    <Grid item xs={isMobile ? 8 : 7}>
+  blockquote: ({ children }) => (
+    <Grid item xs={8} sm={7}>
       <Grid
         item
         container
@@ -331,34 +264,99 @@ export const components = (
             pb: "40px",
           }}
         >
-          <Grid item xs={isMobile ? 8 : 6}>
-            {children.split("\n").map((line, i) => (
-              <Box
-                key={i}
-                component="p"
-                sx={{
-                  ...typography.p,
-                  fontFamily: "Helvetica, sans-serif !important",
-                  width: "100%",
-                  m: 0,
-                  ml: isMobile ? "-20px" : "-34px",
-                  mt: "40px",
-                }}
-              >
-                {line}
-              </Box>
-            ))}
+          <Grid item xs={8} sm={6}>
+            {children}
           </Grid>
         </Grid>
       </Grid>
     </Grid>
   ),
+  ul: ({ children }) => (
+    <Grid item xs={8} sm={6}>
+      <Box
+        component="ul"
+        sx={{
+          ...typography.p,
+          mt: "25px",
+        }}
+      >
+        {children}
+      </Box>
+    </Grid>
+  ),
+  // top tags
+  h5: ({ children }) => (
+    <Grid item xs={8}>
+      <Box
+        component="ul"
+        sx={{
+          ...typography.h5,
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "flex-start",
+          p: 0,
+          m: 0,
+          mt: "25px",
+          mb: "40px",
+          "& li": {
+            border: "1px solid black",
+            borderRadius: "50px",
+            display: "flex",
+            marginBottom: "14px",
+            marginRight: "14px",
+            paddingLeft: "10px",
+            paddingRight: "10px",
+            paddingTop: "4px",
+            paddingBottom: "4px",
+          },
+          listStyleType: "none",
+        }}
+      >
+        {children.split(" | ").map((tag) => (
+          <li key={tag}>{tag}</li>
+        ))}
+      </Box>
+    </Grid>
+  ),
+  // phase / chapter tags
+  ol: ({ children }) => (
+    <Grid item xs={8} sm={2}>
+      <Box
+        component="ol"
+        sx={{
+          ...typography.h5,
+          display: "flex",
+          alignItems: "flex-start",
+          flexDirection: "column",
+          p: 0,
+          mt: "12px",
+          listStyleType: "none",
+          "& li": {
+            display: "flex",
+            alignSelf: "flex-start",
+            backgroundColor: color,
+            borderRadius: "50px",
+            marginBottom: "14px",
+            marginRight: "14px",
+            paddingLeft: "10px",
+            paddingRight: "10px",
+            paddingTop: "4px",
+            paddingBottom: "4px",
+          },
+        }}
+      >
+        {children}
+      </Box>
+    </Grid>
+  ),
+  pre: ({ children }) => {
+    const rawText = children.props.children as string;
+    const [id, text] = extractID(rawText);
+
+    return <Definition id={id}>{text}</Definition>;
+  },
   img: ({ src, alt }) => (
-    <Grid
-      item
-      xs={isMobile ? 8 : 6}
-      sx={{ maxWidth: "100%", textAlign: "center" }}
-    >
+    <Grid item xs={8} sm={6} sx={{ maxWidth: "100%", textAlign: "center" }}>
       <img
         src={src}
         alt={alt}

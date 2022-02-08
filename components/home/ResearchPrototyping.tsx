@@ -4,7 +4,13 @@ import { useAppContext } from "components/AppProvider";
 
 export const ResearchPrototyping: FC = () => {
   const {
-    colors: { mintGreen, limeGreen, brightBlue },
+    colors: {
+      white,
+      mintGreen,
+      darkMintGreen,
+      mustardYellow,
+      darkMustardYellow,
+    },
   } = useAppContext();
 
   return (
@@ -15,14 +21,16 @@ export const ResearchPrototyping: FC = () => {
       viewBox="0 0 870 760"
     >
       <style>
-        {`.pill1 { fill: ${mintGreen} }
-            .pill1:hover { fill: ${brightBlue} }
-            .pill1:hover ~ .testPath { transition: 0.5s; d: path("M 250 15 L 450,15 A 130 130, 0, 0, 1, 585 150 A 130 130, 0, 0, 0, 715 280");}
-            .pill2 { fill: ${limeGreen} }
-            .pill2:hover { fill: ${brightBlue} }
-            .title { font: 400 25px Helvetica; color: black; }`}
+        {`.research { fill: ${mintGreen} }
+            .research:hover { fill: ${darkMintGreen} }
+            .research-title { font-weight: bold; font-size: 26px; font-family: Helvetica; fill: black; }
+            .research:hover ~ .research-title { fill: ${white}; }
+            .prototyping { fill: ${mustardYellow} }
+            .prototyping:hover { fill: ${darkMustardYellow} }
+            .prototyping-title { font-weight: bold; font-size: 26px; font-family: Helvetica; fill: black; }
+            .prototyping:hover ~ .prototyping-title { fill: ${white};`}
       </style>
-      <Link href="/research/4" passHref>
+      <Link href="/research/" passHref>
         <rect
           x="15"
           y="15"
@@ -30,7 +38,7 @@ export const ResearchPrototyping: FC = () => {
           height="270"
           ry="235"
           rx="135"
-          className="pill1"
+          className="research"
           cursor="pointer"
         />
       </Link>
@@ -45,10 +53,10 @@ export const ResearchPrototyping: FC = () => {
         <polygon points="0 0, 10 5, 0 10" />
       </marker>
 
-      <text x="210" y="160" className="title">
+      <text x="210" y="160" className="research-title">
         2 RESEARCH
       </text>
-      <Link href="/prototyping/8" passHref>
+      <Link href="/prototyping/" passHref>
         <rect
           x="580"
           y="280"
@@ -56,14 +64,14 @@ export const ResearchPrototyping: FC = () => {
           height="470"
           ry="135"
           rx="235"
-          className="pill2"
+          className="prototyping"
           cursor="pointer"
         />
       </Link>
       <text
-        x="650"
+        x="660"
         y="390"
-        className="title"
+        className="prototyping-title"
         textAnchor="middle"
         dominantBaseline="central"
         transform="rotate(90, 620, 480)"
@@ -80,22 +88,21 @@ export const ResearchPrototyping: FC = () => {
         stroke="black"
         strokeWidth="4"
         markerEnd="url(#arrowhead)"
-        className="testPath"
       />
       <path
         d="M 770 290
-           A 130 130, 0, 0, 1, 845 410
-           L845,610
-           A 1 1, 0, 0, 1, 580 630"
+           A 130 130, 0, 0, 1, 850 420
+           L850,610
+           A 1 1, 0, 0, 1, 580 620"
         fill="none"
         stroke="black"
         strokeWidth="4"
         markerEnd="url(#arrowhead)"
       />
       <path
-        d="M 580 580
+        d="M 580 570
         L 580,400
-        A 130 130, 0, 0, 0, 450 280
+        A 130 130, 0, 0, 0, 450 285
         L 150,285
         A 1 1 0 0 1 150 15 L165,15"
         fill="none"
