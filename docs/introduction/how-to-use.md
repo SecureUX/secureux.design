@@ -38,4 +38,4 @@ Whether you come to this material as an expert or as a novice, remember to ask y
 
 We hope our guide will help you better center human rights in your work and we’d love any feedback!
 
-[Next: The Introduction!](/intro)
+[Next: The Introduction!](/introduction/intro)
