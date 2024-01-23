@@ -4,3 +4,8 @@ root: ./docs/
 structure:
   readme: README.md
   summary: SUMMARY.md
+
+redirects:
+  centering/1: centering/1.md
+  centering/2: centering/2.md
+  centering/3: centering/3.md
