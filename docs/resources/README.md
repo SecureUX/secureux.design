@@ -1,6 +1,6 @@
 # Resources
 
-### HOW TO USE
+### How To Use
 
 - [UN’s 1948 Universal Declaration on Human Rights](https://www.un.org/en/about-us/universal-declaration-of-human-rights)
 - [Design Justice](https://design-justice.pubpub.org/)
@@ -8,7 +8,7 @@
 - [The Manila Principles](https://manilaprinciples.org/index.html)
 - [Tactical Tech Guide](https://ourdataourselves.tacticaltech.org/posts/23_guide_social_media/)
 
-### INTRODUCTION
+### Introduction
 
 - [Secure UX Checklist](/s/Secure-UX-Checklist.pdf)
 - [Silicon Values by Jillian C. York](https://www.penguinrandomhouse.com/books/667400/silicon-values-by-jillian-c-york/)
@@ -31,7 +31,7 @@
 - [Mastodon](https://joinmastodon.org/)
 - [Technology to Combat Authoritarianism - by Dragana Kaurin](https://www.thirteen.org/openmind/science/technology-to-combat-authoritarianism/6135/)
 
-### CHAPTER 1
+### Chapter 1
 
 - [Ecosystem Map](https://servicedesigntools.org/tools/ecosystem-map)
 - [Principles of Co-Design](https://morethancode.cc/T4SJ_fullreport_082018_AY_web.pdf)
@@ -44,7 +44,7 @@
 - [Design Justice, Chapter 2 Design Practices: “Nothing about Us without Us”](https://direct.mit.edu/books/book/4605/chapter/211369/Design-Practices-Nothing-about-Us-without-Us)
 - [Better security design](https://gusandrews.medium.com/better-security-by-design-88d4efcf916)
 
-### CHAPTER 2
+### Chapter 2
 
 - [Wikimedia Foundation](https://wikimediafoundation.org/)
 - [Signal](https://signal.org/en/)
@@ -52,7 +52,7 @@
 - [Linux's Creator Is Sorry. But Will He Change? - Wired](https://www.wired.com/story/linuxs-creator-is-sorry-but-will-he-change/)
 - [When to Use Which User-Experience Research Methods](https://www.nngroup.com/articles/which-ux-research-methods/)
 
-### CHAPTER 3
+### Chapter 3
 
 - [Tactical Tech’s Holistic Security Guide: A Strategy Manual for Human Rights Defenders](https://holistic-security.tacticaltech.org/chapters/explore.html)
 - [Threat Modeling](https://sec.eff.org/topics/threat-modeling)
@@ -76,7 +76,7 @@
 - [Apple and Google bend to Russian government pressure on voting app - by Adi Robertson](https://www.theverge.com/2021/9/17/22679425/apple-google-remove-navalny-smart-voting-app-russian-election)
 - [Google and Apple, Under Pressure From Russia, Remove Voting App](https://www.nytimes.com/2021/09/17/world/europe/russia-navalny-app-election.html)
 
-### CHAPTER 4
+### Chapter 4
 
 - [Types of Research within Qualitative and Quantitative](https://researchguides.library.wisc.edu/c.php?g=861013&p=6170080)
 - [Key Elements of a Research Proposal Quantitative Design](https://www.wssu.edu/about/offices-and-departments/office-of-sponsored-programs/pre-award/_Files/documents/develop-quantitative.pdf)
@@ -88,7 +88,7 @@
 - [Guerrilla or Hallway Testing](https://xd.adobe.com/ideas/process/user-testing/hallway-usability-test-guerrilla-testing/)
 - [Design Justice approach](https://design-justice.pubpub.org/pub/cfohnud7/release/2)
 
-### CHAPTER 5
+### Chapter 5
 
 - [Inclusive Design](https://www.nngroup.com/articles/inclusive-design/)
 - [What is Accessibility?](https://www.interaction-design.org/literature/topics/accessibility#:~:text=Accessibility%20is%20the%20concept%20of,notably%20better%20designs%20for%20all.)
@@ -112,7 +112,7 @@
 - [The Interaction Design Foundation’s Work on Accessibility](https://www.interaction-design.org/literature/topics/accessibility)
 - [18F’s Guide to Accessibility](https://accessibility.18f.gov/checklist/)
 
-### CHAPTER 6
+### Chapter 6
 
 - [Putting Personas to Work in UX Design: What They Are and Why They’re Important](https://xd.adobe.com/ideas/process/user-research/putting-personas-to-work-in-ux-design/)
 - [Design Justice by Sasha Costanza-Chock](https://mitpress.mit.edu/books/design-justice)
@@ -121,18 +121,18 @@
 - [Persona Template](/s/UXS_Worksheet_CH6.pdf)
 - [Evidence + Empathy: How Personas Can Help Universities Design Better Student Experiences During COVID-19](https://www.hksinc.com/our-news/articles/evidence-empathy-how-personas-can-help-universities-design-better-student-experiences-during-covid-19/)
 
-### CHAPTER 7
+### Chapter 7
 
 - [Design Kit by Ideo.org](https://www.designkit.org/methods/3)
 - [Circle of 6](https://www.circleof6app.com/)
 
-### CHAPTER 8
+### Chapter 8
 
 - [The New Design Congress](https://newdesigncongress.org/en/)
 - [Don’t Make Me Think, Revisited - A Common Sense Approach to Web (and Mobile) Usability](https://sensible.com/dont-make-me-think/)
 - [The Limits to Digital Consent - Understanding the Risks of Ethical Consent and Data Collection for Underrepresented Communities](https://simplysecure.org/blog/the-limits-to-digital-consent-understanding-the-risks-of-ethical-consent-and-data-collection-for-underrepresented-communities/)
 
-### CHAPTER 9
+### Chapter 9
 
 - [Freedom of the Press Foundation](https://freedom.press/)
 - [SecureDrop](https://securedrop.org/)

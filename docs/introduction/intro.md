@@ -14,7 +14,7 @@ Regardless of your background, this curriculum can help you identify and unpack 
 
 We aim to help you learn how to center human rights throughout your entire research, ideation, building, iteration, and release processes. While this guide is created by and for human rights activists, we hope that it will percolate beyond the human rights space to those who want to improve the safety and security of their communities and stakeholders when building resources and tools. As [Edward Snowden said](https://www.reddit.com/r/IAmA/comments/36ru89/just_days_left_to_kill_mass_surveillance_under/crglgh2/), "Arguing that you don't care about the right to privacy because you have nothing to hide is no different than saying you don't care about free speech because you have nothing to say.
 
-## DESIGNING TECHNOLOGY AND HUMAN RIGHTS
+## Designing Technology And Human Rights
 
 **Technology Design is Not Neutral**
 
@@ -43,7 +43,7 @@ Our approach to this question builds on the principles of human rights law, part
 
 Based on these principles, HRCD aims to center the communities we serve in order to deeply understand their needs and mitigate threats they face with our work. Our goal is to take a more equitable, intersectional, feminist, and human rights-focused approach.
 
-## BACKGROUND - A DEEP DIVE
+## Background - A Deep Dive
 
 **The Conventional View of Design**
 
@@ -169,7 +169,7 @@ One example of this is [Mastodon](https://joinmastodon.org/), the open-source, d
 
 Blockchain is another popular technology that many claim can solve numerous problems. As human rights researcher and Localization Lab founder Dragana Kaurin said in an interview for [The Open Mind podcast](https://www.thirteen.org/openmind/science/technology-to-combat-authoritarianism/6135/), “Promoting technologies like blockchain as a seemingly simple solution to complex humanitarian and development challenges oversimplifies these issues and celebrates tech as a "silver bullet" solution that will solve everything from poverty to the refugee crisis. This has led to many projects seeking technical solutions first without analyzing the challenges and opportunities, understanding the limits, potential, and threats that come with the technology in question, or including beneficiaries in decision-making. **When we make decisions in humanitarian and development projects based on solutions we want to use, instead of user needs, we could be exposing beneficiaries to bigger risks, by leaving them out of the decision-making process.”**
 
-## WELCOME TO OUR CURRICULUM
+## Welcome To Our Curriculum
 
 Our approach to design can and should be adjusted to fit specific contexts, audiences, and objectives. The case studies presented in this guide illustrate how those adjustments have been made across different circumstances, and they are intended to serve as lessons for readers confronting design questions in their own problem areas.
 
