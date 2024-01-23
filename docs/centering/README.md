@@ -12,7 +12,7 @@ Lastly, it will teach you how to threat-model to determine the most prevalent th
 
 <br />
 
-## [Chapter 1 – Figuring Out the Problem](/centering/1)
+## [Chapter 1 – Figuring Out the Problem](centering/1)
 
 Chapter 1 explains how to identify a problem faced by the community with whom you are working, how to conceptualize a project based on that problem, and how to determine if you and your project are able to provide a workable solution.
 
@@ -24,7 +24,7 @@ Chapter 1 explains how to identify a problem faced by the community with whom yo
 - Learn about their specific needs
 - Assess their identity within their regional contexts
 
-## [Chapter 2 – Working With A Community](/centering/2)
+## [Chapter 2 – Working With A Community](centering/2)
 
 In chapter 2, we will share real-world lessons from within the human rights community and answer the following questions and more: What are the most ethical ways to begin working with the communities you serve? How do you ensure their safety and security?
 
@@ -37,7 +37,7 @@ In chapter 2, we will share real-world lessons from within the human rights comm
 - Assess their identity within their regional context
 - Learn how to prepare for iterative research
 
-## [Chapter 3 – Understanding Harm (Threat Modeling)](/centering/3)
+## [Chapter 3 – Understanding Harm (Threat Modeling)](centering/3)
 
 In chapter 3, you will learn what all about threat-modeling, why it's important, and when to use it.
 
