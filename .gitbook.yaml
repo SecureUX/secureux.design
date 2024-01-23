@@ -1,0 +1,6 @@
+# See https://docs.gitbook.com/integrations/git-sync/content-configuration for documentation
+root: ./docs/
+
+structure:
+  readme: README.md
+  summary: SUMMARY.md
