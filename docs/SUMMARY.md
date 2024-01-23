@@ -1,7 +1,7 @@
 # Table of contents
 
-* [The Human Rights Centered Design Curriculum](//README.md)
-* [About](//about/README.md)
+* [The Human Rights Centered Design Curriculum](/README.md)
+* [About](/about/README.md)
 
 ## Phase 0: Introduction <a href="#introduction" id="introduction"></a>
 
