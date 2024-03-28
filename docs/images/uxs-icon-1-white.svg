@@ -1,0 +1,26 @@
+<svg id="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 307.46 307.46">
+    <circle cx="153.73" cy="153.73" r="46.97" fill="white" />
+    <rect x="138.38" width="31.34" height="46.04" fill="white" />
+    <polygon points="153.73 62.03 181.42 46.04 126.04 46.04 153.73 62.03" fill="white" />
+    <rect x="137.74" y="261.42" width="31.34" height="46.04" transform="translate(306.82 568.88) rotate(180)"
+        fill="white" />
+    <polygon points="153.73 245.43 126.04 261.42 181.42 261.42 153.73 245.43" fill="white" />
+    <rect x="268.77" y="131.03" width="31.34" height="46.04" transform="translate(438.49 -130.39) rotate(90)"
+        fill="white" />
+    <polygon points="245.43 153.73 261.42 181.42 261.42 126.04 245.43 153.73" fill="white" />
+    <rect x="7.35" y="130.39" width="31.34" height="46.04" transform="translate(-130.39 176.43) rotate(-90)"
+        fill="white" />
+    <polygon points="62.03 153.73 46.04 126.04 46.04 181.42 62.03 153.73" fill="white" />
+    <rect x="230.71" y="38.51" width="31.34" height="46.04" transform="translate(115.67 -156.2) rotate(45)"
+        fill="white" />
+    <polygon points="218.57 88.89 249.46 97.17 210.3 58 218.57 88.89" fill="white" />
+    <rect x="45.41" y="222.91" width="31.34" height="46.04" transform="translate(-69.63 463.02) rotate(-135)"
+        fill="white" />
+    <polygon points="88.89 218.57 58 210.3 97.17 249.46 88.89 218.57" fill="white" />
+    <rect x="230.26" y="223.36" width="31.34" height="46.04" transform="translate(594.05 246.7) rotate(135)"
+        fill="white" />
+    <polygon points="218.57 218.57 210.3 249.46 249.46 210.3 218.57 218.57" fill="white" />
+    <rect x="45.86" y="38.06" width="31.34" height="46.04" transform="translate(-25.17 61.4) rotate(-45)"
+        fill="white" />
+    <polygon points="88.89 88.89 97.17 58 58 97.17 88.89 88.89" fill="white" />
+</svg>
